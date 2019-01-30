@@ -113,7 +113,7 @@ while (num <= 4096)
         num++;
     }
 }
-console.log("There are " + len(numlog) + " numbers between 512 and 4096 that are multiples of 5.");
+console.log("There are " + numlog.length + " numbers between 512 and 4096 that are multiples of 5.");
 
 
 // Multiples of Six
