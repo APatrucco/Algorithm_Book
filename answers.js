@@ -340,7 +340,7 @@ function fitFirst(arr) {
 
 // Farenheit to Celsius
 
-function farenheitToCelsius(fDegrees) { //function that accepts a value as Farenheit degrees
+function farenheitToCelsius(fDegrees) { //function that accepts a value as degrees Farenheit
     
     var cDegrees = 0; //created a variable for Celsius
     var degreeCalc = 0; //created a variable to hold the value of the conversion equation
@@ -359,3 +359,168 @@ function farenheitToCelsius(fDegrees) { //function that accepts a value as Faren
 
 
 // Celsius to Farenheit
+
+function celsiusToFarenheit(cDegrees) { //function that accepts a value as degrees Celsius
+    
+    var cFarenheit = 0; //variable to hold degrees Farenheit
+    
+    while(cFarenheit != (9/5 * cDegrees) + 32) { //while degrees Farenheit does not equal the result of conversion equation
+        if(cFarenheit > (9/5 * cDegrees) +32) { //if degrees Farenheit is greater than the solution
+            cFarenheit -= 0.1; //subtract 0.1
+        }
+        else if(cFarenheit < (9/5 * cDegrees) + 32) { //if degrees Farenheit is less than the solution
+            cFarenheit += 0.1; //add 0.1
+        }
+    }
+    return cFarenheit; //when both sides of equation are equal, return degrees Farenheit
+}
+
+
+// Biggie Size
+
+function biggieSize(arr) {
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] % 2 == 0) {
+            arr[x] = "big";
+        }
+    }
+    return arr;
+}
+
+
+// Print Low, Return High
+
+function prLowReturnHi(arr) {
+    
+    var min = 0;
+    var max = 0;
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] <= min) {
+            min = arr[x];
+        }
+        if(arr[x] >= max) {
+            max = arr[x];
+        }
+    }
+    console.log(min);
+    return max;
+}
+
+
+// Print One, Return Another
+
+function print1ReturnOther(arr) {
+    
+    var firstOdd = 0;
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] % 2 == 1) {
+            firstOdd = arr[x];
+            continue;
+        }
+    }
+    console.log(arr[arr.length - 2]);
+    return firstOdd;
+}
+
+
+// Double Vision
+
+function doubleVision(arr) {
+    
+    var newArr = []; //variable holds new array
+    
+    for(var x = 0; x < arr.length; x++) {
+        newArr.push(arr[x] * 2); //multiplies value of arr[x] by 2 and concatinates to newArr
+    }
+    return newArr;
+}
+
+
+// Count Positives
+
+function countPositives(arr) {
+    
+    var count = 0;
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] > 0) {
+            count++;
+        }
+    }
+    arr[arr.length -1] = count;
+    return arr;
+}
+
+
+// Evens and Odds
+
+function evensAndOdds(arr) {
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] % 2 == 1) {
+            if(arr[x++] == arr[x] && arr[x--] == arr[x]) {
+                console.log("That's odd!");
+            }
+        }
+        else if(arr[x] % 2 == 0) {
+            if(arr[x++] == arr[x] && arr[x--] == arr[x]) {
+                console.log("Even more so!");
+            }
+        }
+    }
+}
+
+
+// Increment the Seconds
+
+function incrementSecond(arr) {
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] % 2 == 1) {
+            arr[x] += 1;
+            console.log(arr[x]);
+        }
+    }
+    return arr;
+}
+
+
+// Previous Lengths
+
+function previousLength(arr) {
+    
+    var holder = "";
+    
+    for(var x = 1; x <= arr.length; x++) {
+        holder = arr[x - 1];
+        arr[x] = holder.length;
+    }
+    return arr;
+}
+
+
+// Add Seven to Most
+
+function sevenToMost(arr) {
+    
+    var newArr = []; //created new array
+    for(var x = 1; x <= arr.length; x++) { //set x equal to 1 so we skip the first value of arr
+        newArr.push(arr[x] + 7); //concatinates sum of array value + 7 to new array
+    }
+    return newArr; //returns new array without modifying original array
+}
+
+
+// Reverse Array
+
+function reverseArray(arr) {
+    
+    arr = arr.reverse(); //sets value of arr to reverse of arr
+    return arr;
+}
+
+
+//
