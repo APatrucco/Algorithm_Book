@@ -523,4 +523,65 @@ function reverseArray(arr) {
 }
 
 
-//
+// Outlook: Negative
+
+function outlookNegative(arr) {
+    
+    var newArr = [];
+    
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] > 0) {
+            newArr[x] *= -1;
+        }
+    }
+    return newArr;
+}
+
+
+// Always Hungry
+
+function hungry(arr) {
+    
+    var none = 0;
+    for(var x = 0; x < arr.length; x++) {
+        if(arr[x] == "food") {
+            console.log("yummy");
+        }
+        else {
+            none++;
+        }
+    }
+    if(none == arr.length) { //if the value of none is equal to the length of the array
+        console.log("I'm hungry");
+    }
+}
+
+
+// Swap Toward the Center
+
+function centerSwap(arr) {
+    
+    var swap = [];
+    var y = 1;
+    var z = 0;
+    for(var x = 0; x < arr.length / 2; x++) {
+        swap = arr[z];
+        arr[z] = arr[arr.length - y];
+        arr[arr.length - y] = swap;
+        y += 2;
+        z += 2;
+    }
+    return arr;
+}
+
+
+// Scale the Array
+
+function scale(arr, num) {
+    
+    for(var x = 0; x < arr.length; x++) { //for each value in array
+        arr[x] *= num;
+    }
+    return arr;
+}
+
